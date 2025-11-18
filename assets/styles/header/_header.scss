@@ -1,7 +1,22 @@
+.header {
+    background-image: url(../img/header_bg_img.png) ;
+    background-repeat: no-repeat;
+    max-width: 1920px;
+    margin: auto;
+    height:750px;
+}
+
+.header-car-img {
+    position:absolute;
+    width: 100%;
+    height: auto;
+    top:-190px;
+    left:50px;
+}
 // header + nav
 .nav {
     &__wrapper {
-    display: flex;
+    display:flex;
     justify-content: space-between;   
     align-items: center; 
     }
@@ -58,5 +73,71 @@
     }
 }
 
-// header + main-info
+// header + main
+.main-info {
+    margin-top:61px;
 
+    &__wrapper {
+        position: relative;
+    }
+
+    &__box {
+    width: 650px;
+    height:495px;
+    border-radius: 24px;
+    border-width: 1px;
+    background: rgba(255, 255, 255, 0.64);
+    padding: 40px 0 0 40px;
+}
+
+    &__benefits {
+        display: flex;
+        flex-direction: column;
+
+        &__options {
+            list-style: none url(../svg/selected_logo.svg) inside;
+            color:$secondary_color;
+            font-weight:600;
+            font-size:26px;
+        }
+
+        &__options--differ {
+            padding:0 0 20px 0
+        }
+
+        &__dif-option {
+            display: flex;
+            align-items:center;
+            gap:5px;
+            @extend .main-info__benefits__options;
+        }
+    }
+
+
+    &__bottom-wrapper {
+        display: flex;
+        gap:25px;
+        margin-top:15px;
+    }
+
+    &__button {
+        width: 301;
+        height: 80;
+        @extend .contact-btn;
+        
+    }
+}
+
+.rental-content {
+    font-weight: 800;
+    font-size: 70px;
+    line-height: 90px;
+}
+
+.align-last-content {
+    padding:0 25px;
+}
+
+.consultation-content {
+    @extend .contact-btn__tel;
+}
