@@ -1,4 +1,18 @@
 @import '../styles/mixin/mixin';
 @import '../styles/variables/var';
+
+// base
 @import '../styles/base/base';
+
+// header
 @import "../styles/header/header";
+
+// section
+@import "../styles/section/order_process";
+@import "../styles/section/speed_calculation";
+@import "../styles/section/purchasement_priority";
+@import "../styles/section/free_consultation";
+@import "../styles/section/contacts";
+
+// footer
+@import "../styles/footer/footer";

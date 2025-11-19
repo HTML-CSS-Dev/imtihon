@@ -1,0 +1,131 @@
+// section + speed-calculation
+
+.speed-calculation {
+    padding:100px 0;
+    background: #F4F6F8;
+    &__title {
+    @extend .order-process__title;
+    margin-bottom: 42px;
+    }
+
+    &__wrapper {
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        gap:28px;
+    }
+
+    &__cards {
+        border-radius:36px;
+        padding:48px 40px;
+        background: white;
+        box-shadow: 0px 10px 50px 0px #00000033;
+
+    &__title {
+        font-weight: 600;
+        font-size: 30px;
+        line-height: 100%;
+    }
+ 
+    &__info {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 26px;
+    margin:24px 0 108px;
+    }
+
+    &__prize {
+    font-weight:600;
+    font-size: 36px;
+    display: flex;
+    gap:10px;
+    align-items: center;
+    }
+
+    }   
+
+    &__cards--background-img {
+    background-image: url(../img/kia-mohave.png);
+    color:#FFFFFF;
+
+}
+
+}
+
+.prize-number {
+    @extend .speed-calculation__cards__prize;
+    font-size:60px;
+}
+
+.cards-description {
+    color:#666666;
+    margin-top: 16px;
+    line-height: 26px;
+
+    &__morecontent {
+        margin-bottom:40px;
+    }
+
+    &__lesscontent {
+        margin-bottom:120px;
+    }
+}
+
+#horizontal-rule {
+    background-color: #C2C2C2;
+    border: 1px solid #C2C2C2;
+    margin: 100px 0 0 0;
+}
+
+
+// section + overall-const
+.overall-cost {
+    padding-bottom: 100px;
+    background: #F4F6F8;
+    &__list {
+        display: flex;
+        flex-direction: column;
+        gap:26px;
+        align-items: end;
+
+
+    &__items {
+        list-style: none;
+        font-weight: 400;
+        font-size: 30px;
+        color:$secondary_color;
+        display: flex;
+        align-items: center;
+        gap:70px;
+    }
+
+    &__items--differ {
+        @extend .overall-cost__list__items;
+        gap:60px;
+    }
+
+    }
+}
+
+.key {
+&__prize {
+    font-weight:600;
+    font-size: 60px;
+    color:$primary_color;
+}
+
+&__currency {
+    font-weight: 600;
+    font-size: 36px;
+}
+}
+
+.rf {
+&__prize {
+@extend .key__prize;
+color: $secondary_color;
+}
+
+&__currency {
+ @extend .key__currency;
+}
+}

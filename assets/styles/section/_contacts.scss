@@ -1,0 +1,55 @@
+.contacts {
+    padding:110px 0;
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__cards {
+    border: 7PX solid #FA002C33;
+    border-radius: 36px;
+    border-width: 7px;
+    border-radius: 36px;
+    width: 706px;
+    height:498px;
+    padding: 23px 20px 44px;
+    
+    &__bottom {
+        display: flex;
+        margin-top:30px;
+        justify-content: center;
+    }
+}
+
+&__title {
+    @extend .order-process__title;
+}
+
+}
+
+.msc_location {
+    width:658px;
+    height:320px;
+}
+
+.branch {
+    &__title {
+    font-weight: 500;
+    font-style: Medium;
+    font-size: 30px;
+    color:$secondary_color;
+    }
+
+    &__location {
+        display: flex;
+        align-items: center;
+        gap:10px;
+        margin-top: 15px;
+
+    }
+}
+
+.tel_number {
+    font-weight: 600;
+    font-size: 30px;
+}

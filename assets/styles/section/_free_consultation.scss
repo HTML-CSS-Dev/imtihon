@@ -1,0 +1,35 @@
+.free-consultation {
+    &__wrapper {
+    background: url(../img/hyundai.png);
+    padding: 70px 72px 73px;
+    border: 7px solid #E7E7E7;
+    border-radius: 20px;
+    }
+    &__title {
+        @extend .order-process__title;
+    }
+
+    &__button {
+        @include buttons;
+        box-shadow: 0px 12px 60px 0px #FA002C66;
+        width: 301px;
+        height: 72px;
+        border-radius: 14px;
+        border: none;
+    }
+}
+
+
+.expert-name {
+    color:$primary_color;
+}
+
+.recomendation {
+    margin: 24px 0 50px;
+    font-weight: 400;
+    line-height: 22px;
+    color: #292929;
+    font-weight: 700;
+    font-style: Bold;
+    font-size: 16px;
+}
