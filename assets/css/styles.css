@@ -542,7 +542,6 @@
 @media (max-width: 1426px) {
   .container {
     max-width: 1024px;
-    border: 1px solid red;
   }
   .header-car-img {
     top: -60px;
