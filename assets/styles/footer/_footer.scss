@@ -2,6 +2,8 @@
     background: #F4F6F8;
     border-top-left-radius:40px;
     border-top-right-radius:40px;
+    padding:54px 0 72px;
+    
     &__wrapper {
         display: flex;
         align-items: center;
@@ -25,19 +27,21 @@
         display: flex;
         flex-direction: column;
         gap:16px;
-        padding-top: 15px;
+        padding-top:25px;
         
     &__items {
         list-style:none;
         font-weight:500;
         font-style:Medium;
         font-size:18px;
-        line-height:26px;
         color: $secondary_color;
     }
-
     }
 
+    &__btn {
+        @include contact-btn;
+        @include buttons;
+    }
 }
 
 .location {
@@ -56,10 +60,25 @@
     }
 }
 
-
 .company-logo {
     height:61px;
     width:232px;
     margin-bottom:16px;
 }
 
+.mobile {
+    &__nav {
+    border:1px solid red;
+    flex-direction:column;
+    gap:5px;
+    display:none;
+    }
+
+    &__list {
+        @extend .details__list;
+        margin-top: 0;
+        &__items {
+        @extend .details__list__items;
+    }
+}
+}

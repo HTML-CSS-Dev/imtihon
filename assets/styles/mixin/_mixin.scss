@@ -2,3 +2,18 @@
     background:$primary-color;
     color:#FFFFFF;
 }
+
+@mixin contact-btn {
+    width: 236px;
+    height: 58px;
+    border-radius:8px;
+    border: none;
+    font-family:'Poppins';
+    font-weight: 700;
+    font-style: Bold;
+    font-size: 18px;
+    display: flex;
+    gap:6px;
+    align-items: center;
+    justify-content: center;
+}

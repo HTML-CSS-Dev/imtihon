@@ -45,6 +45,8 @@
 
     &__cards--background-img {
     background-image: url(../img/kia-mohave.png);
+    background-repeat: no-repeat;
+    background-size: cover;
     color:#FFFFFF;
 
 }
@@ -83,9 +85,9 @@
     background: #F4F6F8;
     &__list {
         display: flex;
-        flex-direction: column;
+        flex-direction:column;
         gap:26px;
-        align-items: end;
+        align-items:end;
 
 
     &__items {

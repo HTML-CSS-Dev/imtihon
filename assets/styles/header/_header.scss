@@ -1,18 +1,19 @@
 .header {
     background-image: url(../img/header_bg_img.png) ;
     background-repeat: no-repeat;
-    max-width: 1920px;
-    margin: auto;
+    max-width:1920px;
+    margin:auto;
     height:750px;
 }
 
 .header-car-img {
     position:absolute;
-    width: 100%;
+    width:100%;
     height: auto;
     top:-190px;
     left:50px;
 }
+
 // header + nav
 .nav {
     &__wrapper {
@@ -44,6 +45,23 @@
         font-size: 16px;
         color:#242424;
         }
+    }
+
+    &__contact {
+        display: flex;
+        align-items: center;
+    }
+}
+
+.burger-btn {
+    width: 32px;
+    height:32px;
+    padding:7px 2px;
+    background: transparent;
+    border: none;
+    img {
+    width:24px;
+    height:17px;
     }
 }
 
@@ -82,7 +100,7 @@
     }
 
     &__box {
-    width: 650px;
+    width:650px;
     height:495px;
     border-radius: 24px;
     border-width: 1px;
@@ -116,13 +134,17 @@
 
     &__bottom-wrapper {
         display: flex;
+        flex-wrap: wrap;
         gap:25px;
         margin-top:15px;
     }
 
+    &__socials {
+    display: flex;
+    gap:25px;
+    }
+
     &__button {
-        width: 301;
-        height: 80;
         @extend .contact-btn;
         
     }
@@ -140,4 +162,11 @@
 
 .consultation-content {
     @extend .contact-btn__tel;
+}
+
+
+
+// mobile + tab responsivness
+.mobile-responsive {
+    display:none;
 }

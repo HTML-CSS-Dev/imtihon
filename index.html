@@ -14,7 +14,7 @@
 <div class="container">
 <div class="nav__wrapper">
 <div class="nav__logo">
-<img class="nav__logo__img" src="./assets/svg/car_logo.svg" alt="car logo">
+<img class="nav__logo__img" src="./assets/img/car_logo.png" alt="car logo">
 </div>
 
 <div class="nav__right">
@@ -32,6 +32,9 @@
 <img class="contact-btn__img" src="./assets/svg/phone_logo.svg" alt="phone logo">
 <a class="contact-btn__tel" href="#">+7 (800) 011-11-11</a>
 </button>
+<button class="burger-btn mobile-responsive">
+<img src="./assets/svg/burger-btn.svg">
+</button>
 </div>
 </div>
 </div>
@@ -45,7 +48,7 @@
 <img class="header-car-img" src="assets/img/header-car.png" alt="">
 <div class="main-info__box">
 <h1 class="rental-content">
-АВТОМОБИЛИ <br>
+АВТО <span class="mobile-hidden">МОБИЛИ</span>  <br>
 ПОД ЗАКАЗ
 </h1>
 <ul class="main-info__benefits">
@@ -56,8 +59,10 @@
 
 <div class="main-info__bottom-wrapper">
 <button class="main-info__button"><a class="consultation-content" href="#">Получить консультацию</a></button>
+<div class="main-info__socials">
 <img src="./assets/svg/tellegram icon.svg" alt="telegram icon">
 <img src="./assets/svg/youtube_icon.svg" alt="youtube icon">
+</div>
 </div>
 </div>
 </div>
@@ -65,7 +70,8 @@
 </main>
 </header>
 
-<!-- section + order-process  -->
+
+<!-- section + order-process -->
 <section>
 <article class="order-process">
 <div class="container">
@@ -144,9 +150,11 @@
 </div>
 </div>
 </article>
-</section>
+</section> 
 
-<!-- section + speed-calculation -->
+
+
+ <!-- section + speed-calculation -->
 <section>
 <article class="speed-calculation">
 <div class="container">
@@ -214,14 +222,16 @@
 <main class="overall-cost">
 <div class="container">
 <ul class="overall-cost__list">
-<li class="overall-cost__list__items"><img src="./assets/svg/red-line.svg">Итоговая стоимость а/м под ключ <span class="key__prize">3 280 000 <b class="key__currency">руб</b></span></li>
-<li class="overall-cost__list__items  overall-cost__list__items--differ"><img src="./assets/svg/red-line.svg">Стоимость аналогичного а/м в РФ <span class="rf__prize">4 900 000 <b class="rf__currency">руб</b></span></li>
+<li class="overall-cost__list__items"><img class="red-lines" src="./assets/svg/red-line.svg"><span class="reorder-in-mobile">Итоговая стоимость а/м под ключ</span> <span class="key__prize">3 280 000 <b class="key__currency">руб</b></span></li>
+<li class="overall-cost__list__items  overall-cost__list__items--differ"><img class="red-lines" src="./assets/svg/red-line.svg"><span class="reorder-in-mobile">Стоимость аналогичного а/м в РФ </span> <span class="rf__prize">4 900 000 <b class="rf__currency">руб</b></span></li>
 </ul>
 </div>
 </main>
 </section>
 
-<!-- section + purchasement-priority -->
+
+
+<!-- section + purchasement-priority   -->
 <section>
 <nav class="purchasement-priority">
 <div class="container">
@@ -264,9 +274,7 @@
 </nav>
 </section>
 
-
-
-<!-- section + free-consultation -->
+<!-- section + free-consultation  -->
 <section>
 <main class="free-consultation">
 <div class="container">
@@ -286,7 +294,8 @@
 </main>
 </section>
 
-<!--section + contacts  -->
+
+<!-- section + contacts -->
 <section>
 <main class="contacts">
 <div class="container">
@@ -299,7 +308,7 @@
 <div class="branch">
 <h6 class="branch__title">Филиал Москва</h6>
 <div class="branch__location">
-<img src="assets/svg/location_logo.svg"><span>Москва, ул. Семеновская д 14 офис 122</span>
+<img src="assets/svg/location_logo.svg"><span class="direction-instruction">Москва, ул. Семеновская д 14 офис 122</span>
 </div>
 </div>
 <span class="tel_number">+7 (800) 011-11-11</span>
@@ -312,7 +321,7 @@
 <div class="branch">
 <h6 class="branch__title">Филиал Самара</h6>
 <div class="branch__location">
-<img src="assets/svg/location_logo.svg"><span>Москва, ул. Семеновская д 14 офис 122</span>
+<img src="assets/svg/location_logo.svg"><span class="direction-instruction">Москва, ул. Семеновская д 14 офис 122</span>
 </div>
 </div>
 <span class="tel_number">+7 (800) 011-11-11</span>
@@ -324,29 +333,30 @@
 </main>
 </section>
 
+
 <footer class="footer">
 <nav class="details">
 <div class="container">
 <div class="details__wrapper">
 <div class="details__left">
 <div class="details__rights">
-<img class="company-logo" src="./assets/svg/car_logo.svg" alt="car logo">
+<img class="company-logo" src="./assets/img/car_logo.png" alt="car logo">
 <p class="details__description">© 2022 EncarRUS. Все права защищены, согласно <br> ГК РФ ст. 1225 - 1551 об авторском праве. Любое<br> копирование материалов сайта и элементов<br> включая изображения строго запрещены.</p>
 </div>
-<ul class="details__list">
+<ul class="details__list tablet-hidden">
     <li class="details__list__items">Авто из Кореи </li>
     <li class="details__list__items">Авто из Казахстана</li>
     <li class="details__list__items">Авто из ОАЭ</li>
     <li class="details__list__items">Авто из Китая</li>
 </ul>
-<ul class="details__list">
+<ul class="details__list tablet-hidden">
     <li class="details__list__items">Главная</li>
     <li class="details__list__items">О компании</li>
     <li class="details__list__items">Контакты</li>
 </ul>
 </div>
 <div class="details__right">
-<button class="contact-btn">
+<button class="details__btn">
 <img class="contact-btn__img" src="./assets/svg/phone_logo.svg" alt="phone logo">
 <a class="contact-btn__tel" href="#">+7 (800) 011-11-11</a>
 </button>
@@ -360,7 +370,22 @@
 </div>
 </div>
 </div>
+<div class="container">
+<div class="mobile__nav">
+<ul class="mobile__list">
+    <li class="mobile__list__items">Авто из Кореи </li>
+    <li class="mobile__list__items">Авто из Казахстана</li>
+    <li class="mobile__list__items">Авто из ОАЭ</li>
+    <li class="mobile__list__items">Авто из Китая</li>
+</ul>
+<ul class="details__list">
+    <li class="mobile__list__items">Главная</li>
+    <li class="mobile__list__items">О компании</li>
+    <li class="mobile__list__items">Контакты</li>
+</ul>
+</div>
+</div>
 </nav>
-</footer>
+</footer> 
 </body>
 </html>

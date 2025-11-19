@@ -50,6 +50,22 @@
   font-size: 16px;
   color: #242424;
 }
+.nav__contact {
+  display: flex;
+  align-items: center;
+}
+
+.burger-btn {
+  width: 32px;
+  height: 32px;
+  padding: 7px 2px;
+  background: transparent;
+  border: none;
+}
+.burger-btn img {
+  width: 24px;
+  height: 17px;
+}
 
 .contact-btn, .main-info__button {
   background: #FA002C;
@@ -110,14 +126,14 @@
 }
 .main-info__bottom-wrapper {
   display: flex;
+  flex-wrap: wrap;
   gap: 25px;
   margin-top: 15px;
 }
-.main-info__button {
-  width: 301;
-  height: 80;
+.main-info__socials {
+  display: flex;
+  gap: 25px;
 }
-
 .rental-content {
   font-weight: 800;
   font-size: 70px;
@@ -126,6 +142,10 @@
 
 .align-last-content {
   padding: 0 25px;
+}
+
+.mobile-responsive {
+  display: none;
 }
 
 .order-process {
@@ -223,6 +243,8 @@
 }
 .speed-calculation__cards--background-img {
   background-image: url(../img/kia-mohave.png);
+  background-repeat: no-repeat;
+  background-size: cover;
   color: #FFFFFF;
 }
 
@@ -442,6 +464,7 @@
   background: #F4F6F8;
   border-top-left-radius: 40px;
   border-top-right-radius: 40px;
+  padding: 54px 0 72px;
 }
 .details__wrapper {
   display: flex;
@@ -458,19 +481,34 @@
   line-height: 22px;
   color: #292929;
 }
-.details__list {
+.details__list, .mobile__list {
   display: flex;
   flex-direction: column;
   gap: 16px;
-  padding-top: 15px;
+  padding-top: 25px;
 }
-.details__list__items {
+.details__list__items, .mobile__list__items {
   list-style: none;
   font-weight: 500;
   font-style: Medium;
   font-size: 18px;
-  line-height: 26px;
   color: #000000;
+}
+.details__btn {
+  width: 236px;
+  height: 58px;
+  border-radius: 8px;
+  border: none;
+  font-family: "Poppins";
+  font-weight: 700;
+  font-style: Bold;
+  font-size: 18px;
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  justify-content: center;
+  background: #FA002C;
+  color: #FFFFFF;
 }
 
 .location__details {
@@ -490,4 +528,316 @@
   height: 61px;
   width: 232px;
   margin-bottom: 16px;
+}
+
+.mobile__nav {
+  border: 1px solid red;
+  flex-direction: column;
+  gap: 5px;
+  display: none;
+}
+.mobile__list {
+  margin-top: 0;
+}
+@media (max-width: 1426px) {
+  .container {
+    max-width: 1024px;
+    border: 1px solid red;
+  }
+  .header-car-img {
+    top: -60px;
+    left: 100px;
+  }
+  .nav__list {
+    display: none;
+  }
+  .nav__logo {
+    order: 2;
+  }
+  .nav__logo__img {
+    width: 168px;
+    height: 44px;
+  }
+  .nav__right {
+    order: 1;
+  }
+  .contact-btn, .main-info__button {
+    display: none;
+  }
+  .mobile-responsive {
+    display: block;
+  }
+  .main-info__benefits__options, .main-info__benefits__dif-option {
+    font-weight: 600;
+    font-size: 20px;
+  }
+  .main-info__button {
+    background: #FA002C;
+    color: #FFFFFF;
+    width: 236px;
+    height: 58px;
+    border-radius: 8px;
+    border: none;
+    font-family: "Poppins";
+    font-weight: 700;
+    font-style: Bold;
+    font-size: 18px;
+    display: flex;
+    gap: 6px;
+    align-items: center;
+    justify-content: center;
+  }
+  .rental-content {
+    font-size: 50px;
+    line-height: 70px;
+  }
+  .details__list, .mobile__list {
+    padding-top: 60px;
+  }
+  .order-process__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 100px;
+  }
+  .order-process__cards--differ {
+    border-right: 3px dashed #FA002C;
+  }
+  .order-process__cards--differ-place {
+    padding-left: 0;
+  }
+  .order-process__cards--differ-place-top {
+    padding-top: 0;
+  }
+  .speed-calculation__wrapper {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+  }
+  .speed-calculation__cards {
+    padding: 38px 30px;
+  }
+  .speed-calculation__cards__info {
+    font-size: 14px;
+  }
+  .contacts__cards {
+    width: 49%;
+    height: 420px;
+    border-radius: 24px;
+    border-width: 7px;
+  }
+  .branch__title {
+    font-size: 2vw;
+  }
+  .msc_location {
+    width: 100%;
+    height: 70%;
+  }
+  .tel_number {
+    font-size: 2vw;
+  }
+}
+@media (max-width: 1024px) {
+  .container {
+    padding: 20px;
+  }
+  .header-car-img {
+    display: none;
+  }
+  .purchasement-priority__left {
+    display: none;
+  }
+  .audi_img {
+    width: 100%;
+    height: auto;
+  }
+  .honest__racing {
+    margin-top: 15px;
+    padding-bottom: 0;
+    height: 480px;
+  }
+  .honest__racing__buttons {
+    display: none;
+  }
+  .honest__title {
+    font-size: 20px;
+    margin-top: 20px;
+  }
+  .honest__description {
+    font-size: 16px;
+    margin: 10px 0;
+  }
+  .details__wrapper {
+    gap: 10px;
+  }
+  .details__left {
+    gap: 10px;
+  }
+  .details__list, .mobile__list {
+    padding-top: 70px;
+  }
+  .details__list__items, .mobile__list__items {
+    font-size: 1.9vw;
+  }
+}
+@media (max-width: 800px) {
+  .container {
+    padding: 0 20px;
+  }
+  .header {
+    background-image: url(../img/mobile-respon-img.png) cover;
+    width: 100%;
+    margin: auto;
+    height: auto;
+  }
+  .header-car-img {
+    display: none;
+  }
+  .main-info__box {
+    width: 100%;
+    border-radius: 0;
+    border: 0;
+    background: transparent;
+    padding: 0;
+  }
+  .mobile-hidden {
+    display: none;
+  }
+  .order-process__title, .speed-calculation__title, .purchasement-priority__heading, .free-consultation__title, .contacts__title {
+    font-size: 34px;
+    line-height: 50px;
+  }
+  .order-process__summary {
+    font-size: 18px;
+    line-height: 100%;
+  }
+  #horizontal-rule {
+    display: none;
+  }
+  .speed-calculation {
+    padding: 50px 0;
+  }
+  .speed-calculation__wrapper {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 30px;
+  }
+  .speed-calculation__title {
+    font-size: 34px;
+    line-height: 50px;
+  }
+  .speed-calculation__cards {
+    padding: 28px 20px;
+  }
+  .speed-calculation__cards__info {
+    font-size: 14px;
+  }
+  .speed-calculation__cards__prize, .prize-number {
+    font-size: 24px;
+  }
+  .prize-number {
+    font-size: 50px;
+  }
+  .red-lines {
+    display: none;
+  }
+  .overall-cost__list {
+    align-items: center;
+  }
+  .overall-cost__list__items, .overall-cost__list__items--differ {
+    flex-direction: column;
+    gap: 4px;
+  }
+  .reorder-in-mobile {
+    order: 2;
+    font-size: 2vw;
+  }
+  .key__prize, .rf__prize {
+    font-size: 5vw;
+  }
+  .key__currency, .rf__currency {
+    font-size: 3vw;
+  }
+  .purchasement-priority__heading {
+    font-size: 34px;
+    line-height: 50px;
+  }
+  .free-consultation__wrapper {
+    background-position: center right;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 40px 42px 43px;
+  }
+  .free-consultation__title {
+    font-size: 4vw;
+    line-height: 100%;
+  }
+  .free-consultation__button {
+    width: 201px;
+    height: 52px;
+  }
+  .recomendation {
+    margin: 16px 0 24px;
+    font-size: 2vw;
+    list-style: 100%;
+  }
+  .contacts__cards {
+    padding: 12px 12px;
+    height: 298px;
+  }
+  .msc_location {
+    height: 50%;
+  }
+  .tablet-hidden {
+    display: none;
+  }
+}
+@media (max-width: 510px) {
+  .details__wrapper {
+    flex-direction: column;
+    align-items: start;
+    gap: 50px;
+  }
+  .main-info {
+    margin-top: 47px;
+  }
+  .main-info__box {
+    padding: 0;
+  }
+  .main-info__bottom-wrapper {
+    justify-content: center;
+  }
+  .main-info__benefits {
+    display: flex;
+    flex-direction: column;
+  }
+  .main-info__benefits__options, .main-info__benefits__dif-option {
+    font-size: 6vw;
+  }
+  .rental-content {
+    font-size: 10vw;
+    line-height: 50px;
+  }
+  .contacts__wrapper {
+    flex-direction: column;
+    gap: 16px;
+  }
+  .contacts__cards {
+    width: 100%;
+    height: 50%;
+  }
+  .msc_location {
+    width: 100%;
+    height: auto;
+  }
+  .tel_number {
+    font-size: 2.5vw;
+  }
+  .direction-instruction {
+    font-size: 2vw;
+  }
+  .mobile__nav {
+    display: flex;
+  }
+  .mobile__list__items {
+    font-size: 18px;
+  }
 }/*# sourceMappingURL=styles.css.map */
