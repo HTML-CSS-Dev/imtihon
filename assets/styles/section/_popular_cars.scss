@@ -1,4 +1,8 @@
 .popular-cars {
+    margin:181px 0 100px;
+    &__heading {
+    @extend .speed-calculation__title; 
+    }
 
     &__wrapper {
         display: flex;
@@ -7,7 +11,6 @@
 
     &__cards {
     width:461px;
-    height:764px;
     border-radius: 36px;
     box-shadow: 0px 2px 50px 0px #0000001F;
     padding: 15px 15px 30px;
@@ -20,12 +23,14 @@
     font-style: Bold;
     font-size: 24px;
     color:$secondary-color;
+    margin-bottom: 16px;
     }
 
     &__details {
     display: flex;
     flex-direction: column;
     gap:10px;
+    margin-top:24px;
 
     &__items {
     list-style:none;
@@ -33,24 +38,76 @@
     font-size: 16px;
     color:$secondary-color;
     }
+    }
 
+    &__prize-buttons {
+    display: flex;
+    // gap:27px;
+    justify-content: space-between;
+    margin-bottom: 24px;
     }
 
     }
 }
-
-
 }
-
 
 .kia-k5-img {
     width:431px;
     height:270px;
-    border-radius:7px;
+    border-radius:20px;
 }
 
 .cars-details {
     font-weight: 600;
     font-size: 16px;
     color:&secondary-color;
+}
+
+
+.russian-prize-btn {
+background: transparent;
+border: none;
+}
+
+.korean-prize-btn {
+    width:220px;
+    height:105px;
+    border-top-left-radius:20px;
+    border-bottom-left-radius:20px;
+    background: #FEE5E9;
+    border: none;
+}
+
+.prize {
+    &__russian {
+    font-weight: 500;
+    font-style: Medium;
+    font-size: 25px;
+    color:$secondary-color;
+    }
+
+    &__korean {
+    @extend .prize__russian;
+    color:$primary-color;
+    font-weight:800;
+    }
+}
+
+.prize-description {
+    text-align: justify;
+    margin-top: 3px;
+    &--differ {
+    padding-left:40px;
+    }
+}
+
+.choose-analogue-btn {
+    @extend .free-consultation__button;
+    display:block;
+    margin:auto;
+}
+
+.horizontal-rule {
+    margin-top:30px;
+    border: 1px solid #C1C1C1;
 }

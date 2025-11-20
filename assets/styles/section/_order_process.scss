@@ -1,6 +1,6 @@
 .order-process {
     background:#F4F6F8;
-    padding-top:80px;
+    padding-bottom:124px;
     &__title {
     font-weight:700;
     font-style:Bold;
@@ -20,7 +20,7 @@
     &__wrapper {
     display: grid;
     grid-template-columns: repeat(4,1fr);
-
+    padding-top:70px;
     }
 
     &__cards {

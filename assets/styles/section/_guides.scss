@@ -1,0 +1,89 @@
+.guides {
+    margin: 67px 0 175px;
+    &__wrapper {
+        display: flex;
+        gap:129px;
+    border: 7px solid;
+    border-image-source: linear-gradient(
+    180deg,
+    rgba(231, 231, 231, 0) 0%,
+    rgba(231, 231, 231, 0.78) 37.09%,
+    #E7E7E7 100%
+);
+border-image-slice: 1;
+    }
+
+    &__instructions {
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        row-gap:45px;
+        column-gap:80px;
+        padding-bottom:96px;
+    }
+}
+
+.instructions {
+    &__icons{
+    width: 60px;
+    height:60px;
+    border-radius:10px;
+    border:3px solid #FA002C26;
+    background: transparent;
+
+    &__logos {
+    width:30px;
+    height:27px;
+}
+
+}
+    &__explanations {
+    font-weight: 500;
+    font-style: Medium;
+    font-size: 18px;
+    line-height: 26px;
+    margin-top:16px;
+    }
+
+}
+
+
+.form {
+    box-shadow: 0px 2px 50px 0px #23252612;
+    border-radius: 22px;
+    padding:45px 50px 50px 70px;
+    height: 525px;
+
+    &__heading {
+        @extend .speed-calculation__title;
+        margin-bottom: 24px;
+    }
+
+    &__explanation {
+        @extend .nav__list__items;
+        line-height: 26px;
+        margin-bottom: 36px;
+    }
+
+    &__button {
+        @extend .free-consultation__button;
+        width:286px;
+        display: block;
+    }
+}
+
+.input-number {
+    width: 449px;
+    height: 72px;
+    border-radius: 14px;
+    border:1px solid #C9C9C9;
+    border-radius: 14px;
+    padding:26px 0 26px 24px;
+    margin-bottom: 16px;
+    outline: none;
+    @include input-text;
+
+    &::placeholder {
+        @include input-text;
+    }
+
+}

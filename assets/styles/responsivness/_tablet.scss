@@ -69,7 +69,47 @@
         }
     }
 
-// section 
+
+// section guidess
+.guides {
+    &__wrapper {
+        border: none;
+        flex-direction:column;
+    }
+    
+    &__instructions {
+    display: flex;
+    flex-wrap: wrap;
+    
+    &__items {
+    box-shadow: 0px 2px 30px 0px #0000001F;
+    padding:20px;
+    border-radius: 16px;
+    height:auto;
+    width:100%;
+    }
+}
+
+}
+
+.form {
+    height: auto;
+}
+
+.input-number {
+    height: 72px;
+    padding:26px 0 26px 24px;
+    margin-bottom: 16px;
+    outline: none;
+    @include input-text;
+
+    &::placeholder {
+        @include input-text;
+    }
+
+}
+
+// section oreder-process 
 .order-process {
     &__wrapper {
         display:flex;
@@ -133,7 +173,12 @@
     font-size:2vw;
 }
 
+
+
+
 }
+
+
 
 
 @media (max-width:1024px) {

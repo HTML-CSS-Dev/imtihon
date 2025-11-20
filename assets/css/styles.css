@@ -43,7 +43,7 @@
   display: flex;
   gap: 48px;
 }
-.nav__list__items {
+.nav__list__items, .form__explanation {
   list-style: none;
   font-weight: 500;
   font-style: Medium;
@@ -150,9 +150,9 @@
 
 .order-process {
   background: #F4F6F8;
-  padding-top: 80px;
+  padding-bottom: 124px;
 }
-.order-process__title, .contacts__title, .free-consultation__title, .purchasement-priority__heading, .speed-calculation__title {
+.order-process__title, .contacts__title, .free-consultation__title, .purchasement-priority__heading, .speed-calculation__title, .form__heading, .popular-cars__heading {
   font-weight: 700;
   font-style: Bold;
   font-size: 50px;
@@ -169,6 +169,7 @@
 .order-process__wrapper {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
+  padding-top: 70px;
 }
 .order-process__cards {
   border-right: 3px dashed #FA002C;
@@ -205,13 +206,98 @@
   color: #FA002C;
 }
 
+.guides {
+  margin: 67px 0 175px;
+}
+.guides__wrapper {
+  display: flex;
+  gap: 129px;
+  border: 7px solid;
+  border-image-source: linear-gradient(180deg, rgba(231, 231, 231, 0) 0%, rgba(231, 231, 231, 0.78) 37.09%, #E7E7E7 100%);
+  border-image-slice: 1;
+}
+.guides__instructions {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  row-gap: 45px;
+  -moz-column-gap: 80px;
+       column-gap: 80px;
+  padding-bottom: 96px;
+}
+
+.instructions__icons {
+  width: 60px;
+  height: 60px;
+  border-radius: 10px;
+  border: 3px solid rgba(250, 0, 44, 0.1490196078);
+  background: transparent;
+}
+.instructions__icons__logos {
+  width: 30px;
+  height: 27px;
+}
+.instructions__explanations {
+  font-weight: 500;
+  font-style: Medium;
+  font-size: 18px;
+  line-height: 26px;
+  margin-top: 16px;
+}
+
+.form {
+  box-shadow: 0px 2px 50px 0px rgba(35, 37, 38, 0.0705882353);
+  border-radius: 22px;
+  padding: 45px 50px 50px 70px;
+  height: 525px;
+}
+.form__heading {
+  margin-bottom: 24px;
+}
+.form__explanation {
+  line-height: 26px;
+  margin-bottom: 36px;
+}
+.form__button {
+  width: 286px;
+  display: block;
+}
+
+.input-number {
+  width: 449px;
+  height: 72px;
+  border-radius: 14px;
+  border: 1px solid #C9C9C9;
+  border-radius: 14px;
+  padding: 26px 0 26px 24px;
+  margin-bottom: 16px;
+  outline: none;
+  font-weight: 700;
+  font-style: Bold;
+  font-size: 16px;
+  color: #000000;
+}
+.input-number::-moz-placeholder {
+  font-weight: 700;
+  font-style: Bold;
+  font-size: 16px;
+  color: #000000;
+}
+.input-number::placeholder {
+  font-weight: 700;
+  font-style: Bold;
+  font-size: 16px;
+  color: #000000;
+}
+
+.popular-cars {
+  margin: 181px 0 100px;
+}
 .popular-cars__wrapper {
   display: flex;
   justify-content: space-between;
 }
 .popular-cars__cards {
   width: 461px;
-  height: 764px;
   border-radius: 36px;
   box-shadow: 0px 2px 50px 0px rgba(0, 0, 0, 0.1215686275);
   padding: 15px 15px 30px;
@@ -224,11 +310,13 @@
   font-style: Bold;
   font-size: 24px;
   color: #000000;
+  margin-bottom: 16px;
 }
 .popular-cars__cards__info__details {
   display: flex;
   flex-direction: column;
   gap: 10px;
+  margin-top: 24px;
 }
 .popular-cars__cards__info__details__items {
   list-style: none;
@@ -236,11 +324,16 @@
   font-size: 16px;
   color: #000000;
 }
+.popular-cars__cards__info__prize-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
 
 .kia-k5-img {
   width: 431px;
   height: 270px;
-  border-radius: 7px;
+  border-radius: 20px;
 }
 
 .cars-details {
@@ -249,11 +342,54 @@
   color: .cars-details secondary-color;
 }
 
+.russian-prize-btn {
+  background: transparent;
+  border: none;
+}
+
+.korean-prize-btn {
+  width: 220px;
+  height: 105px;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  background: #FEE5E9;
+  border: none;
+}
+
+.prize__russian, .prize__korean {
+  font-weight: 500;
+  font-style: Medium;
+  font-size: 25px;
+  color: #000000;
+}
+.prize__korean {
+  color: #FA002C;
+  font-weight: 800;
+}
+
+.prize-description {
+  text-align: justify;
+  margin-top: 3px;
+}
+.prize-description--differ {
+  padding-left: 40px;
+}
+
+.choose-analogue-btn {
+  display: block;
+  margin: auto;
+}
+
+.horizontal-rule {
+  margin-top: 30px;
+  border: 1px solid #C1C1C1;
+}
+
 .speed-calculation {
   padding: 100px 0;
   background: #F4F6F8;
 }
-.speed-calculation__title {
+.speed-calculation__title, .form__heading, .popular-cars__heading {
   margin-bottom: 42px;
 }
 .speed-calculation__wrapper {
@@ -436,7 +572,7 @@
   border: 7px solid #E7E7E7;
   border-radius: 20px;
 }
-.free-consultation__button {
+.free-consultation__button, .form__button, .choose-analogue-btn {
   background: #FA002C;
   color: #FFFFFF;
   box-shadow: 0px 12px 60px 0px rgba(250, 0, 44, 0.4);
@@ -636,6 +772,46 @@
   .details__list, .mobile__list {
     padding-top: 60px;
   }
+  .guides__wrapper {
+    border: none;
+    flex-direction: column;
+  }
+  .guides__instructions {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .guides__instructions__items {
+    box-shadow: 0px 2px 30px 0px rgba(0, 0, 0, 0.1215686275);
+    padding: 20px;
+    border-radius: 16px;
+    height: auto;
+    width: 100%;
+  }
+  .form {
+    height: auto;
+  }
+  .input-number {
+    height: 72px;
+    padding: 26px 0 26px 24px;
+    margin-bottom: 16px;
+    outline: none;
+    font-weight: 700;
+    font-style: Bold;
+    font-size: 16px;
+    color: #000000;
+  }
+  .input-number::-moz-placeholder {
+    font-weight: 700;
+    font-style: Bold;
+    font-size: 16px;
+    color: #000000;
+  }
+  .input-number::placeholder {
+    font-weight: 700;
+    font-style: Bold;
+    font-size: 16px;
+    color: #000000;
+  }
   .order-process__wrapper {
     display: flex;
     flex-wrap: wrap;
@@ -744,13 +920,21 @@
   .mobile-hidden {
     display: none;
   }
-  .order-process__title, .speed-calculation__title, .purchasement-priority__heading, .free-consultation__title, .contacts__title {
+  .order-process__title, .speed-calculation__title, .form__heading, .popular-cars__heading, .purchasement-priority__heading, .free-consultation__title, .contacts__title {
     font-size: 34px;
     line-height: 50px;
   }
   .order-process__summary {
     font-size: 18px;
     line-height: 100%;
+  }
+  .input-number {
+    width: 100%;
+  }
+  .form {
+    border: none;
+    box-shadow: none;
+    padding: 0;
   }
   #horizontal-rule {
     display: none;
@@ -762,7 +946,7 @@
     grid-template-columns: repeat(1, 1fr);
     gap: 30px;
   }
-  .speed-calculation__title {
+  .speed-calculation__title, .form__heading, .popular-cars__heading {
     font-size: 34px;
     line-height: 50px;
   }
@@ -812,7 +996,7 @@
     font-size: 4vw;
     line-height: 100%;
   }
-  .free-consultation__button {
+  .free-consultation__button, .form__button, .choose-analogue-btn {
     width: 201px;
     height: 52px;
   }
