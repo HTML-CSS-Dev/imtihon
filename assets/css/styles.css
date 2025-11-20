@@ -205,6 +205,50 @@
   color: #FA002C;
 }
 
+.popular-cars__wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+.popular-cars__cards {
+  width: 461px;
+  height: 764px;
+  border-radius: 36px;
+  box-shadow: 0px 2px 50px 0px rgba(0, 0, 0, 0.1215686275);
+  padding: 15px 15px 30px;
+}
+.popular-cars__cards__info {
+  margin-top: 24px;
+}
+.popular-cars__cards__info__title {
+  font-weight: 700;
+  font-style: Bold;
+  font-size: 24px;
+  color: #000000;
+}
+.popular-cars__cards__info__details {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.popular-cars__cards__info__details__items {
+  list-style: none;
+  font-weight: 400;
+  font-size: 16px;
+  color: #000000;
+}
+
+.kia-k5-img {
+  width: 431px;
+  height: 270px;
+  border-radius: 7px;
+}
+
+.cars-details {
+  font-weight: 600;
+  font-size: 16px;
+  color: .cars-details secondary-color;
+}
+
 .speed-calculation {
   padding: 100px 0;
   background: #F4F6F8;
@@ -531,7 +575,6 @@
 }
 
 .mobile__nav {
-  border: 1px solid red;
   flex-direction: column;
   gap: 5px;
   display: none;
@@ -750,7 +793,7 @@
     font-size: 2vw;
   }
   .key__prize, .rf__prize {
-    font-size: 5vw;
+    font-size: 10vw;
   }
   .key__currency, .rf__currency {
     font-size: 3vw;

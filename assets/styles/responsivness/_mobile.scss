@@ -101,7 +101,7 @@
 
 .key {
     &__prize {
-    font-size:5vw;
+    font-size:10vw;
     }
 
     &__currency {
@@ -116,9 +116,6 @@
     line-height:50px;
     }
 }
-
-
-
 
 // section free-consultation
 .free-consultation {
@@ -164,8 +161,6 @@
 }
 
 }
-
-
 
 
 @media (max-width:510px) {
@@ -233,9 +228,6 @@
 }
 
 
-
-
-
 // footer
 .mobile {
     &__nav {
@@ -248,6 +240,4 @@
         }
     }
 }
-
-
 }
