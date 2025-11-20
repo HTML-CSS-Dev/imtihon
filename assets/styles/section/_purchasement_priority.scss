@@ -83,11 +83,21 @@
     border:1px solid #D3D3D3;
     border-radius: 50px;
     background: transparent;
+
+    &:hover {
+    border:1px solid $primary_color;
+    transform: scale(1.1);
+    transition:0.9;
+    cursor: pointer;
+    }
 }
 
 .arrow-right {
     @extend .arrow-left;
     border: 1px solid $primary_color;
+    &:hover{
+        border: 1px solid $secondary_color;
+    }
 }
 
 

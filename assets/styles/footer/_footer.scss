@@ -3,7 +3,7 @@
     border-top-left-radius:40px;
     border-top-right-radius:40px;
     padding:54px 0 72px;
-    
+
     &__wrapper {
         display: flex;
         align-items: center;
@@ -22,62 +22,119 @@
         color: #292929;
     }
 
-
     &__list {
         display: flex;
         flex-direction: column;
         gap:16px;
         padding-top:25px;
-        
-    &__items {
-        list-style:none;
-        font-weight:500;
-        font-style:Medium;
-        font-size:18px;
-        color: $secondary_color;
-    }
+
+        &__items {
+            list-style:none;
+            font-weight:500;
+            font-style:Medium;
+            font-size:18px;
+            color: $secondary_color;
+
+            transition: color .3s ease, transform .3s ease;
+
+            &:hover {
+                color: darken($secondary_color, 15%);
+                transform: translateX(4px);
+                cursor: pointer;
+
+            }
+        }
     }
 
     &__btn {
         @include contact-btn;
         @include buttons;
+
+        /* плавность для кнопки */
+        transition: all .3s ease;
+
+        &:hover {
+            transform: translateY(-3px);
+            opacity: .9;
+        }
+    }
+}
+
+@keyframes fade-up {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
     }
 }
 
 .location {
     &__details {
-    display: flex;
-    align-items: center;
-    gap:10px;
-    margin-top:16px;
+        display: flex;
+        align-items: center;
+        gap:10px;
+        margin-top:16px;
+
+        /* лёгкое появление каждой иконки */
+        animation: fade-in .6s ease-out;
     }
 
     &__description {
-    font-weight:400;
-    font-size:16px;
-    line-height:22px;
-    color:#292929;
+        font-weight:400;
+        font-size:16px;
+        line-height:22px;
+        color:#292929;
     }
+}
+
+@keyframes fade-in {
+    from { opacity:0; }
+    to { opacity:1; }
 }
 
 .company-logo {
     height:61px;
     width:232px;
     margin-bottom:16px;
+
+    /* мягкое проявление логотипа */
+    animation: fade-in .8s ease-out;
 }
 
 .mobile {
     &__nav {
-    flex-direction:column;
-    gap:5px;
-    display:none;
+        flex-direction:column;
+        gap:5px;
+        display:none;
+        opacity:0;
+
+        /* Когда будет класс .active — включится анимация */
+        &.active {
+            display:flex;
+            animation: slide-down .4s ease-out forwards;
+        }
     }
 
     &__list {
         @extend .details__list;
         margin-top: 0;
+
         &__items {
-        @extend .details__list__items;
+            @extend .details__list__items;
+        }
     }
 }
+
+@keyframes slide-down {
+    from {
+        opacity:0;
+        transform: translateY(-15px);
+    }
+    to {
+        opacity:1;
+        transform: translateY(0);
+    }
 }

@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   margin: 0;
   padding: 0;
@@ -24,8 +25,19 @@
   height: auto;
   top: -190px;
   left: 50px;
+  animation: car-drop 1s ease-out forwards;
 }
 
+@keyframes car-drop {
+  from {
+    opacity: 0;
+    transform: translateY(-60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 .nav__wrapper {
   display: flex;
   justify-content: space-between;
@@ -49,6 +61,11 @@
   font-style: Medium;
   font-size: 16px;
   color: #242424;
+  /* плавное изменение цвета */
+  transition: color 0.25s ease;
+}
+.nav__list__items:hover, .form__explanation:hover {
+  color: black;
 }
 .nav__contact {
   display: flex;
@@ -61,6 +78,12 @@
   padding: 7px 2px;
   background: transparent;
   border: none;
+  /* плавность */
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+.burger-btn:hover {
+  transform: scale(1.1);
+  opacity: 0.85;
 }
 .burger-btn img {
   width: 24px;
@@ -82,6 +105,12 @@
   gap: 6px;
   align-items: center;
   justify-content: center;
+  /* плавность */
+  transition: all 0.3s ease;
+}
+.contact-btn:hover, .main-info__button:hover {
+  transform: translateY(-3px);
+  opacity: 0.9;
 }
 .contact-btn__img {
   height: 20px;
@@ -90,6 +119,10 @@
 .contact-btn__tel, .consultation-content {
   color: #fff;
   text-decoration: none;
+  transition: opacity 0.3s ease;
+}
+.contact-btn__tel:hover, .consultation-content:hover {
+  opacity: 0.8;
 }
 
 .main-info {
@@ -105,6 +138,18 @@
   border-width: 1px;
   background: rgba(255, 255, 255, 0.64);
   padding: 40px 0 0 40px;
+  /* плавное появление */
+  animation: fade-in 0.6s ease-out forwards;
+}
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 .main-info__benefits {
   display: flex;
@@ -134,6 +179,12 @@
   display: flex;
   gap: 25px;
 }
+.main-info__socials img {
+  transition: transform 0.3s ease;
+}
+.main-info__socials img:hover {
+  transform: scale(1.1);
+}
 .rental-content {
   font-weight: 800;
   font-size: 70px;
@@ -151,6 +202,7 @@
 .order-process {
   background: #F4F6F8;
   padding-bottom: 124px;
+  padding-top: 100px;
 }
 .order-process__title, .contacts__title, .free-consultation__title, .purchasement-priority__heading, .speed-calculation__title, .form__heading, .popular-cars__heading {
   font-weight: 700;
@@ -208,6 +260,10 @@
 
 .guides {
   margin: 67px 0 175px;
+  /* плавное появление всего блока */
+  animation: fade-up 0.9s ease-out forwards;
+  opacity: 0;
+  transform: translateY(30px);
 }
 .guides__wrapper {
   display: flex;
@@ -223,6 +279,22 @@
   -moz-column-gap: 80px;
        column-gap: 80px;
   padding-bottom: 96px;
+  /* поочерёдное появление элементов */
+}
+.guides__instructions > div {
+  animation: fade-in 0.8s ease-out both;
+}
+.guides__instructions > div:nth-child(1) {
+  animation-delay: 0.1s;
+}
+.guides__instructions > div:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.guides__instructions > div:nth-child(3) {
+  animation-delay: 0.3s;
+}
+.guides__instructions > div:nth-child(4) {
+  animation-delay: 0.4s;
 }
 
 .instructions__icons {
@@ -231,10 +303,18 @@
   border-radius: 10px;
   border: 3px solid rgba(250, 0, 44, 0.1490196078);
   background: transparent;
+  /* hover эффект иконки */
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+.instructions__icons:hover {
+  transform: scale(1.07);
+  border-color: #fa002c;
 }
 .instructions__icons__logos {
   width: 30px;
   height: 27px;
+  /* мягкое появление логотипа внутри */
+  animation: fade-in 0.6s ease-out;
 }
 .instructions__explanations {
   font-weight: 500;
@@ -260,6 +340,12 @@
 .form__button {
   width: 286px;
   display: block;
+  /* hover */
+  transition: all 0.3s ease;
+}
+.form__button:hover {
+  transform: translateY(-3px);
+  opacity: 0.9;
 }
 
 .input-number {
@@ -267,7 +353,6 @@
   height: 72px;
   border-radius: 14px;
   border: 1px solid #C9C9C9;
-  border-radius: 14px;
   padding: 26px 0 26px 24px;
   margin-bottom: 16px;
   outline: none;
@@ -275,6 +360,12 @@
   font-style: Bold;
   font-size: 16px;
   color: #000000;
+  /* плавность */
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+.input-number:focus {
+  border-color: #FA002C;
+  box-shadow: 0 0 0 3px rgba(250, 0, 44, 0.2);
 }
 .input-number::-moz-placeholder {
   font-weight: 700;
@@ -289,6 +380,25 @@
   color: #000000;
 }
 
+/* keyframes */
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 .popular-cars {
   margin: 181px 0 100px;
 }
@@ -402,6 +512,11 @@
   padding: 48px 40px;
   background: white;
   box-shadow: 0px 10px 50px 0px rgba(0, 0, 0, 0.2);
+}
+.speed-calculation__cards:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+  transition: 1s;
 }
 .speed-calculation__cards__title {
   font-weight: 600;
@@ -555,9 +670,18 @@
   border-radius: 50px;
   background: transparent;
 }
+.arrow-left:hover, .arrow-right:hover {
+  border: 1px solid #FA002C;
+  transform: scale(1.1);
+  transition: 0.9;
+  cursor: pointer;
+}
 
 .arrow-right {
   border: 1px solid #FA002C;
+}
+.arrow-right:hover {
+  border: 1px solid #000000;
 }
 
 .audi_img {
@@ -580,6 +704,11 @@
   height: 72px;
   border-radius: 14px;
   border: none;
+}
+.free-consultation__button:hover, .form__button:hover, .choose-analogue-btn:hover {
+  transform: translateY(-10px);
+  transition: 1s;
+  cursor: pointer;
 }
 
 .expert-name {
@@ -673,6 +802,12 @@
   font-style: Medium;
   font-size: 18px;
   color: #000000;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+.details__list__items:hover, .mobile__list__items:hover {
+  color: black;
+  transform: translateX(4px);
+  cursor: pointer;
 }
 .details__btn {
   width: 236px;
@@ -689,13 +824,31 @@
   justify-content: center;
   background: #FA002C;
   color: #FFFFFF;
+  /* плавность для кнопки */
+  transition: all 0.3s ease;
+}
+.details__btn:hover {
+  transform: translateY(-3px);
+  opacity: 0.9;
 }
 
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 .location__details {
   display: flex;
   align-items: center;
   gap: 10px;
   margin-top: 16px;
+  /* лёгкое появление каждой иконки */
+  animation: fade-in 0.6s ease-out;
 }
 .location__description {
   font-weight: 400;
@@ -704,19 +857,45 @@
   color: #292929;
 }
 
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 .company-logo {
   height: 61px;
   width: 232px;
   margin-bottom: 16px;
+  /* мягкое проявление логотипа */
+  animation: fade-in 0.8s ease-out;
 }
 
 .mobile__nav {
   flex-direction: column;
   gap: 5px;
   display: none;
+  opacity: 0;
+  /* Когда будет класс .active — включится анимация */
+}
+.mobile__nav.active {
+  display: flex;
+  animation: slide-down 0.4s ease-out forwards;
 }
 .mobile__list {
   margin-top: 0;
+}
+@keyframes slide-down {
+  from {
+    opacity: 0;
+    transform: translateY(-15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 @media (max-width: 1426px) {
   .container {
@@ -929,7 +1108,7 @@
     line-height: 100%;
   }
   .input-number {
-    width: 100%;
+    width: 400px;
   }
   .form {
     border: none;
@@ -1041,6 +1220,9 @@
   .rental-content {
     font-size: 10vw;
     line-height: 50px;
+  }
+  .input-number {
+    width: 100%;
   }
   .contacts__wrapper {
     flex-direction: column;

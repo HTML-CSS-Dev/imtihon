@@ -1,5 +1,5 @@
 .header {
-    background-image: url(../img/header_bg_img.png) ;
+    background-image: url(../img/header_bg_img.png);
     background-repeat: no-repeat;
     max-width:1920px;
     margin:auto;
@@ -9,29 +9,36 @@
 .header-car-img {
     position:absolute;
     width:100%;
-    height: auto;
+    height:auto;
     top:-190px;
     left:50px;
+    
+    animation: car-drop 1s ease-out forwards;
+}
+
+@keyframes car-drop {
+    from { opacity:0; transform: translateY(-60px); }
+    to { opacity:1; transform: translateY(0); }
 }
 
 // header + nav
 .nav {
     &__wrapper {
-    display:flex;
-    justify-content: space-between;   
-    align-items: center; 
+        display:flex;
+        justify-content: space-between;   
+        align-items: center; 
     }
 
     &__logo {
         &__img {
-        width: 263px;
-        height: 69px;
+            width: 263px;
+            height: 69px;
         }
     }
 
     &__right {
-    display: flex;
-    gap:55px;
+        display: flex;
+        gap:55px;
     }
 
     &__list {
@@ -39,11 +46,18 @@
         gap:48px;
 
         &__items {
-        list-style: none;
-        font-weight:500;
-        font-style:Medium;
-        font-size: 16px;
-        color:#242424;
+            list-style: none;
+            font-weight:500;
+            font-style:Medium;
+            font-size: 16px;
+            color:#242424;
+
+            /* плавное изменение цвета */
+            transition: color .25s ease;
+
+            &:hover {
+                color: darken(#242424, 20%);
+            }
         }
     }
 
@@ -59,35 +73,57 @@
     padding:7px 2px;
     background: transparent;
     border: none;
+
+    /* плавность */
+    transition: transform .3s ease, opacity .3s ease;
+
+    &:hover {
+        transform: scale(1.1);
+        opacity: .85;
+    }
+
     img {
-    width:24px;
-    height:17px;
+        width:24px;
+        height:17px;
     }
 }
 
-
 .contact-btn {
     @include buttons;
-    width: 236px;
-    height: 58px;
+    width:236px;
+    height:58px;
     border-radius:8px;
-    border: none;
+    border:none;
     font-family:'Poppins';
-    font-weight: 700;
-    font-style: Bold;
-    font-size: 18px;
+    font-weight:700;
+    font-style:Bold;
+    font-size:18px;
     display: flex;
     gap:6px;
     align-items: center;
     justify-content: center;
 
-    &__img {
-    height:20px;
-    width:20px;
+    /* плавность */
+    transition: all .3s ease;
+
+    &:hover {
+        transform: translateY(-3px);
+        opacity: .9;
     }
+
+    &__img {
+        height:20px;
+        width:20px;
+    }
+
     &__tel {
         color: #fff;
         text-decoration: none;
+        transition: opacity .3s ease;
+
+        &:hover {
+            opacity: .8;
+        }
     }
 }
 
@@ -100,13 +136,21 @@
     }
 
     &__box {
-    width:650px;
-    height:495px;
-    border-radius: 24px;
-    border-width: 1px;
-    background: rgba(255, 255, 255, 0.64);
-    padding: 40px 0 0 40px;
-}
+        width:650px;
+        height:495px;
+        border-radius: 24px;
+        border-width: 1px;
+        background: rgba(255, 255, 255, 0.64);
+        padding: 40px 0 0 40px;
+
+        /* плавное появление */
+        animation: fade-in .6s ease-out forwards;
+    }
+
+    @keyframes fade-in {
+        from { opacity:0; transform: translateY(20px); }
+        to { opacity:1; transform: translateY(0); }
+    }
 
     &__benefits {
         display: flex;
@@ -120,7 +164,7 @@
         }
 
         &__options--differ {
-            padding:0 0 20px 0
+            padding:0 0 20px 0;
         }
 
         &__dif-option {
@@ -131,7 +175,6 @@
         }
     }
 
-
     &__bottom-wrapper {
         display: flex;
         flex-wrap: wrap;
@@ -140,13 +183,20 @@
     }
 
     &__socials {
-    display: flex;
-    gap:25px;
+        display: flex;
+        gap:25px;
+
+        img {
+            transition: transform .3s ease;
+
+            &:hover {
+                transform: scale(1.1);
+            }
+        }
     }
 
     &__button {
         @extend .contact-btn;
-        
     }
 }
 
@@ -163,8 +213,6 @@
 .consultation-content {
     @extend .contact-btn__tel;
 }
-
-
 
 // mobile + tab responsivness
 .mobile-responsive {

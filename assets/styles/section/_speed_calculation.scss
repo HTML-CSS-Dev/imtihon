@@ -1,6 +1,6 @@
 // section + speed-calculation
-
 .speed-calculation {
+
     padding:100px 0;
     background: #F4F6F8;
     &__title {
@@ -19,11 +19,17 @@
         padding:48px 40px;
         background: white;
         box-shadow: 0px 10px 50px 0px #00000033;
+    
+        &:hover {
+        transform: scale(1.05);
+        cursor: pointer;
+        transition:1s;
+        }
 
     &__title {
-        font-weight: 600;
-        font-size: 30px;
-        line-height: 100%;
+        font-weight:600;
+        font-size:30px;
+        line-height:100%;
     }
  
     &__info {

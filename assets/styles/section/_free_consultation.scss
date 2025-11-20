@@ -16,6 +16,12 @@
         height: 72px;
         border-radius: 14px;
         border: none;
+
+        &:hover {
+        transform: translateY(-10px);
+        transition: 1s;
+        cursor:pointer;
+        }
     }
 }
 
